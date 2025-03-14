@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn, getInitials } from "@/lib/utils";
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Session } from "next-auth";
 
 interface Props {
@@ -37,7 +37,7 @@ export default function Header({ session }: Props) {
               <AvatarFallback
                 className={"bg-amber-100 text-dark-100 font-semibold"}
               >
-                {getInitials(session.user?.name!)}
+                {getInitials(session.user?.name as string)}
               </AvatarFallback>
             </Avatar>
           </Link>

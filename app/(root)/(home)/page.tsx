@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import BookOverview from "@/components/home/book-overview";
 import BookList from "@/components/home/book-list";
 import { sampleBooks } from "@/constants";
